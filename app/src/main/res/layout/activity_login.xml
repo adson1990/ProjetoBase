@@ -1,0 +1,226 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context="projetobase.projeto.app.com.br.projetobase.LoginActivity">
+
+    <!-- Login progress -->
+   <!-- <ProgressBar
+        android:id="@+id/login_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone" />-->
+
+ <!--   <ScrollView
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/email_login_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <AutoCompleteTextView
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/prompt_email"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/prompt_password"
+                    android:imeActionId="@+id/login"
+                    android:imeActionLabel="@string/action_sign_in_short"
+                    android:imeOptions="actionUnspecified"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/email_sign_in_button"
+                style="?android:textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/action_sign_in"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>-->
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:background="@color/branco">
+
+        //Plano de fundo
+        <ImageView
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:id="@+id/imagem_logo"
+            android:src="@drawable/logo_app"
+            android:gravity="center"
+            android:layout_gravity="center" />
+
+        //Nome do app
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name_project"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:textColor="@color/vermelhoEscuro"
+            android:layout_gravity="center_horizontal|top"/>
+
+        //Login
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:textColor="@color/vermelhoEscuro"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="100px"/>
+
+        //receber usuário de login
+        <TextView
+            android:text="@string/usuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:layout_gravity="left|bottom"
+            android:layout_marginLeft="50px"
+            android:layout_marginBottom="410px"
+            android:singleLine="true"/>//não permite quebra de linha
+        <EditText
+            android:id="@+id/usuario_login"
+            android:layout_width="359dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|bottom"
+            android:layout_marginBottom="350px"
+            android:background="@color/cinzaEscuro"
+            android:textSize="20dp"
+            android:inputType="text"
+            android:singleLine="true"
+            android:hint="Usuário"
+            android:layout_marginLeft="25px"/>//input type = tipo de entrada aceita
+
+        //receber senha de login
+        <TextView
+            android:text="@string/senha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:layout_gravity="left|bottom"
+            android:layout_marginLeft="50px"
+            android:layout_marginBottom="300px"/>
+        <EditText
+            android:id="@+id/senha_login"
+            android:layout_width="359dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|bottom"
+            android:layout_marginBottom="245px"
+            android:background="@color/cinzaEscuro"
+            android:textSize="20dp"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:maxLength="8"
+            android:hint="Senha"
+            android:layout_marginLeft="25px" />
+
+        //entrar
+
+        //cadastrar
+
+        <TextView
+            android:id="@+id/cadastro_usuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:text="CADASTRAR"
+            android:layout_gravity="center|bottom"
+            android:layout_marginBottom="90px"
+            android:clickable="true"
+            android:onClick="cadastrar"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/esqueci_senha"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:text="Esqueci a Senha"
+            android:layout_gravity="center|bottom"
+            android:layout_marginBottom="37px"
+            android:clickable="true"
+            android:onClick="esquecerSenha"/>
+
+        <CheckBox
+            android:layout_width="25dp"
+            android:layout_height="20dp"
+            android:id="@+id/chkGravar"
+            android:layout_gravity="right|bottom"
+            android:layout_marginBottom="190px"
+            android:layout_marginRight="120dp"
+            android:text="GRAVAR DADOS"
+            android:textColor="@color/preto"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="92dp"
+            android:layout_height="35dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:text="ENTRAR"
+            android:layout_gravity="left|bottom"
+            android:layout_marginBottom="160px"
+            android:clickable="true"
+            android:onClick="logar"
+            android:layout_marginLeft="50px"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView"
+            android:layout_gravity="right|bottom"
+            android:layout_marginBottom="190px"
+            android:text="GRAVAR DADOS"
+            android:textColor="@color/preto"
+            android:textStyle="bold"/>
+    </FrameLayout>
+</LinearLayout>

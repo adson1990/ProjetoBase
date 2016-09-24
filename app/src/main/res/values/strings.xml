@@ -1,0 +1,74 @@
+<resources>
+    <string name="app_name">ProjetoBase</string>
+    <string name="title_activity_login">Quick Help!</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+
+    <string name="name_project">Quick Help!</string>
+    <string name="login">Login</string>
+    <string name="usuario">Usuário</string>
+    <string name="senha">Senha</string>
+    <string name="msg_login">Usuário ou senha não conferem.</string>
+    <string name="cadastro">Cadastro de Usuário</string>
+    <string name="nome">Nome Completo*</string>
+    <string name="cpf">CPF* (Somente números)</string>
+    <string name="data_nasc">Data de Nascimento*</string>
+    <string name="selecione">Selecione</string>
+    <string name="sexo">Sexo*</string>
+    <string name="masculino">Masculino</string>
+    <string name="feminino">Feminino</string>
+    <string name="telefone">Telefone* ( apenas números com DDD (2 dígitos))</string>
+    <string name="mail">E-mail*</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="tipo">Tipo</string>
+    <string name="rh">RH</string>
+    <string name="msgCadastroComplementar">
+        O cadastro comlementar não é obrigatório, entretanto, agiliza o atendimento
+        caso o chamado/ocorrência seja para o próprio usuário que pede. Assim o SAMU
+        poderá levá-lo a um hospital de seu plano de saúde.
+    </string>
+    <string name="editPerf">Editar Perfil</string>
+    <string name="msg_obrigacao">* significa que o campo é obrigatório</string>
+    <string name="msg_tbt">Ativar código PIN que será usado para confirmar envio de solicitação de um chamado.</string>
+    <string name="msg_edita">Confira bem seus dados antes de salvar!</string>
+
+    <string-array name="tp_sangue">
+        <item>A</item>
+        <item>O</item>
+        <item>B</item>
+        <item>AB</item>
+    </string-array>
+
+    <string-array name="fator_rh">
+        <item>+</item>
+        <item>-</item>
+    </string-array>
+
+    <string name="msg_sobre">
+        \t O aplicativo Quick Help, tem por objetivo tentar agilizar o atendimento por parte do SAMU, oferencendo aos
+        usuários as opções de abrir um chamado para outras pessoas ou para si próprio. Dentre outras coisas
+        o aplicativo também oferece alguns extras como uma área de perfil do usuário onde ele pode inserir uma
+        foto ou customizar o nome de perfil. O aplicativo oferecer suporte ainda a posicionamento no mapa, para
+        tentar fazer com que o socorro seja o mais breve possível, através do menú pode-se ainda verificar um
+        histórico de chamados abertos.\n\n
+
+        APP Quick Help 2.0\n
+        Empresa: home_office (empresa fantasia).
+    </string>
+    <string name="title_activity_exibir_perfil">ExibirPerfil</string>
+    <string name="title_activity_tela_principal">TelaPrincipal</string>
+    <string name="title_activity_cadastro_usuario">CadastroUsuario</string>
+    <string name="title_activity_esquecer_senha">EsquecerSenha</string>
+</resources>

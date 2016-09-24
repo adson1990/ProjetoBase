@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="projetobase.projeto.app.com.br.projetobase.CadastroUsuario"
+    tools:showIn="@layout/activity_cadastro_usuario">
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_marginRight="0px"
+            android:layout_width="452dp"
+            android:layout_height="666dp"
+            android:src="@drawable/logo_app"
+            android:layout_gravity="center_horizontal|top" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                //text view tela de cadastro
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cadastro"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textAppearance=
+                        "?android:textAppearanceLarge"
+                    android:textColor="@color/azulEscuro"
+                    android:background="@color/verdeEscuro"
+                    android:gravity="center"/>
+
+                //recebe nome de login
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Login*"
+                    android:textSize="20px"
+                    android:textStyle="bold"
+                    android:textColor="@color/preto"
+                    android:layout_marginTop="15px"
+                    android:layout_marginLeft="10px"/>
+                <EditText
+                    android:id="@+id/nome_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/cinzaEscuro"
+                    android:singleLine="true"
+                    android:inputType="text" />
+
+                //recebe o nome completo do usuário
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nome"
+                    android:textSize="20px"
+                    android:textStyle="bold"
+                    android:textColor="@color/preto"
+                    android:layout_marginTop="15px"
+                    android:layout_marginLeft="10px"/>
+                <EditText
+                    android:id="@+id/nome_cadastro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/cinzaEscuro"
+                    android:singleLine="true"
+                    android:inputType="text" />
+
+                //recebe a senha do usuário
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Senha* (até 8 caracteres)"
+                    android:textSize="20px"
+                    android:textStyle="bold"
+                    android:textColor="@color/preto"
+                    android:layout_marginTop="15px"
+                    android:layout_marginLeft="10px"/>
+                <EditText
+                    android:id="@+id/senha_cadastro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/cinzaEscuro"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:maxLength="8"/>
+
+                //confirma a senha passada anteriormente
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Confirme a Senha*"
+                    android:textSize="20px"
+                    android:textStyle="bold"
+                    android:textColor="@color/preto"
+                    android:layout_marginTop="15px"
+                    android:layout_marginLeft="10px"/>
+                <EditText
+                    android:id="@+id/senha_confirma"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/cinzaEscuro"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:maxLength="8"/>
+
+                //recebe o CPF do usuário
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cpf"
+                    android:textSize="20px"
+                    android:textStyle="bold"
+                    android:textColor="@color/preto"
+                    android:layout_marginTop="15px"
+                    android:layout_marginLeft="10px"/>
+                <EditText
+                    android:id="@+id/cpf_usuario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/cinzaEscuro"
+                    android:singleLine="true"
+                    android:phoneNumber="true"
+                    android:inputType="number"
+                    android:maxLength="11"/>
+
+                //selecinar a data de nascimento
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/data_nasc"
+                        android:textSize="20px"
+                        android:textStyle="bold"
+                        android:textColor="@color/preto"
+                        android:layout_marginTop="15px"
+                        android:layout_marginLeft="10px"/>
+
+                    <Button
+                        android:id="@+id/btn_data"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/selecione"
+                        android:layout_marginLeft="50px"
+                        android:layout_marginTop="15px"
+                        android:onClick="selecionarData"/>
+                </LinearLayout>
+
+                //selecionar o sexo
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sexo"
+                        android:textSize="20px"
+                        android:textStyle="bold"
+                        android:textColor="@color/preto"
+                        android:layout_marginTop="15px"
+                        android:layout_marginLeft="10px"/>
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/sexo_fem"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/feminino"
+                            android:textColor="@color/preto"/>
+
+                        <RadioButton
+                            android:id="@+id/sexo_masc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/masculino"
+                            android:textColor="@color/preto"/>
+
+                    </RadioGroup>
+                </LinearLayout>
+
+                //inserir telefone
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/telefone"
+                    android:textSize="20px"
+                    android:textStyle="bold"
+                    android:textColor="@color/preto"
+                    android:layout_marginTop="15px"
+                    android:layout_marginLeft="10px"/>
+                <EditText
+                    android:id="@+id/fone_usuario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/cinzaEscuro"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:maxLength="11"
+                    android:phoneNumber="true"/>
+
+                //inserir e-mail
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mail"
+                    android:textSize="20px"
+                    android:textStyle="bold"
+                    android:textColor="@color/preto"
+                    android:layout_marginTop="15px"
+                    android:layout_marginLeft="10px"/>
+                <EditText
+                    android:id="@+id/mail_usuario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/cinzaEscuro"
+                    android:inputType="text"
+                    android:singleLine="true"/>
+
+                //confirma e-mail inserido
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Confirmar E-mail*"
+                    android:textSize="20px"
+                    android:textStyle="bold"
+                    android:textColor="@color/preto"
+                    android:layout_marginTop="15px"
+                    android:layout_marginLeft="10px"/>
+                <EditText
+                    android:id="@+id/confirma_mail_usuario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/cinzaEscuro"
+                    android:inputType="text"
+                    android:singleLine="true"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/msg_obrigacao"
+                    android:textColor="@color/preto"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10px"/>
+
+                //título cadastro complementar
+                <TextView
+                    android:text="Cadastro Complementar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/verdeEscuro"
+                    android:textColor="@color/azulEscuro"
+                    android:gravity="center"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="30px"/>
+
+                // textview tipo sanguineo
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10px">
+
+                    <TextView
+                        android:text="Tipo sanguíneo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:textColor="@color/preto"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="20px"/>
+
+                    <TextView
+                        android:text="Fator RH"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:textColor="@color/preto"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="280px"/>
+                </LinearLayout>
+
+                //recebe tipo sanguineo
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <Spinner
+                        android:id="@+id/tp_sanguineo"
+                        android:layout_width="110dp"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="20px"
+                        android:prompt="@string/tipo" />
+
+                    <Spinner
+                        android:id="@+id/fator_rh"
+                        android:layout_width="150px"
+                        android:layout_height="90px"
+                        android:layout_marginLeft="250px"
+                        android:prompt="@string/rh"/>
+
+                </LinearLayout>
+
+                //Plano de saúde
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Plano de Saúde"
+                    android:textColor="@color/preto"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10px"
+                    android:layout_marginLeft="10px"/>
+                <EditText
+                    android:id="@+id/plano_saude"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/cinzaEscuro"
+                    android:inputType="text"
+                    android:singleLine="true"/>
+
+                //Número da carteira
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Número da carteira (apenas números)"
+                    android:textColor="@color/preto"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10px"
+                    android:layout_marginLeft="10px"/>
+                <EditText
+                    android:id="@+id/carteira_plano"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/cinzaEscuro"
+                    android:inputType="number"
+                    android:singleLine="true"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/msgCadastroComplementar"
+                    android:textColor="@color/vermelhoEscuro"
+                    android:layout_marginTop="30px"/>
+
+                //BT cadastrar
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cadastrar"
+                    android:layout_marginTop="15px"
+                    android:onClick="cadastro"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </FrameLayout>
+
+</RelativeLayout>

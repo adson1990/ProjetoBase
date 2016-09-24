@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--menu de referência para a classe ajuda activity-->
+
+    <chamado android:id="@+id/abre_chamado_si"
+        android:title="Chamados Para Si"/>
+
+    <chamado android:id="@+id/abre_chamado_outro"
+        android:title="Chamados Para Outro"/>
+
+</menu>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_esquecer_senha"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="projetobase.projeto.app.com.br.projetobase.EsquecerSenha"
+    tools:showIn="@layout/activity_esquecer_senha">
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:orientation="vertical" android:background="@color/branco">
+
+        <ImageView
+            android:layout_width="463dp"
+            android:layout_height="682dp"
+            android:src="@drawable/logo_app"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Esqueci minha senha."
+            android:textColor="@color/preto"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="60px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Como você deseja recuperar sua senha?"
+                android:textColor="@color/preto"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="E-mail"
+                    android:textColor="@color/preto"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/rbPin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Código PIN"
+                    android:textColor="@color/preto"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="70px"/>
+
+            </RadioGroup>
+
+            //recebe e-mail de cadastro
+            <TextView
+                android:id="@+id/mail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Digite o e-mail de cadastro"
+                android:textColor="@color/preto"
+                android:textStyle="bold" />
+            <EditText
+                android:id="@+id/receb_mail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/cinzaEscuro"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textSize="25dp" />
+
+            //botão enviar
+            <Button
+                android:id="@+id/btEnviar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enviar"
+                />
+
+            //digite o código recebido via e-mail
+            <TextView
+                android:id="@+id/codigo_mail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Digite o código recebido"
+                android:textColor="@color/preto"
+                android:textStyle="bold" />
+            <EditText
+                android:id="@+id/receb_codigo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/cinzaEscuro"
+                android:textSize="22dp"
+                android:singleLine="true"
+                android:inputType="number"
+                android:maxLength="5"
+                android:phoneNumber="true"/>
+
+            <Button
+                android:id="@+id/btConfirmar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Confirmar"
+                android:onClick="mudancaSenha"/>
+
+            //recuperar com o PIN
+            <TextView
+                android:id="@+id/pin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Digite seu PIN"
+                android:textColor="@color/preto"
+                android:textStyle="bold" />
+            <EditText
+                android:id="@+id/receb_pin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/cinzaEscuro"
+                android:textSize="25dp"
+                android:password="true"
+                android:singleLine="true"
+                android:maxLength="4"
+                android:phoneNumber="true"
+                android:inputType="number"/>
+
+            <Button
+                android:id="@+id/btMudaSenha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mudar Senha"
+                android:onClick="mudancaSenha"/>
+
+            //mudança de senha
+            <TextView
+                android:id="@+id/tvSenha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Senha* (até 8 caracteres)"
+                android:textSize="20px"
+                android:textStyle="bold"
+                android:textColor="@color/preto"
+                android:layout_marginLeft="10px"/>
+            <EditText
+                android:id="@+id/etSenha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/cinzaEscuro"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:maxLength="8" />
+
+            //confirma a senha passada anteriormente
+            <TextView
+                android:id="@+id/tvConfirmaSenha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Confirme a Senha*"
+                android:textSize="20px"
+                android:textStyle="bold"
+                android:textColor="@color/preto"
+                android:layout_marginLeft="10px"/>
+            <EditText
+                android:id="@+id/etConfirmaSenha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/cinzaEscuro"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:maxLength="8" />
+
+            <Button
+                android:id="@+id/confirmarFim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Confirmar" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</RelativeLayout>

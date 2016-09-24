@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="projetobase.projeto.app.com.br.projetobase">
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icone_app"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        //1-activity de login
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        //2- tela principal (default)
+        <activity
+            android:name=".TelaPrincipal"
+            android:label="@string/title_activity_tela_principal"
+            android:parentActivityName=".LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="projetobase.projeto.app.com.br.projetobase.LoginActivity" />
+        </activity>
+        //3-cadastro de usuario
+        <activity
+            android:name=".CadastroUsuario"
+            android:label="@string/title_activity_cadastro_usuario"
+            android:parentActivityName=".LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="projetobase.projeto.app.com.br.projetobase.LoginActivity" />
+        </activity>
+        <activity
+            android:name=".EsquecerSenha"
+            android:label="@string/title_activity_esquecer_senha"
+            android:parentActivityName=".LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="projetobase.projeto.app.com.br.projetobase.LoginActivity" />
+        </activity>
+    </application>
+
+</manifest>

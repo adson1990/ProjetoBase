@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="projetobase.projeto.app.com.br.projetobase.TelaPrincipal"
+    tools:showIn="@layout/activity_tela_principal">
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="453dp"
+            android:layout_height="670dp"
+            android:src="@drawable/logo_app"
+            android:layout_gravity="center" />
+
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="match_parent"
+            android:orientation="vertical" android:weightSum="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Escolha uma Opção"
+                android:textColor="@color/preto"
+                android:textStyle="bold"
+                android:textSize="35px"
+                android:gravity="center"/>
+
+
+            //imagem de configuração
+            <ImageView
+                android:layout_width="130px"
+                android:layout_height="100px"
+                android:src="@drawable/configuration"
+                android:clickable="true"
+                android:onClick="telaEditar"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/editPerf"
+                android:textColor="@color/preto"
+                android:textStyle="bold"
+                android:textSize="20px"
+                android:layout_marginLeft="10px"/>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/preto"
+                android:textStyle="bold"
+                android:textSize="40px"
+                android:layout_gravity="center"
+                android:text="Abrir um Chamado"
+                android:layout_marginTop="130px"/>
+
+            <ImageView
+                android:layout_width="238dp"
+                android:layout_height="103dp"
+                android:src="@drawable/paravoce"
+                android:layout_gravity="center"
+                android:layout_marginTop="30px"
+                android:clickable="true"
+                android:onClick="paraVoce"/>
+
+            <ImageView
+                android:layout_width="257dp"
+                android:layout_height="103dp"
+                android:src="@drawable/paraoutro"
+                android:layout_gravity="center"
+                android:layout_marginTop="30px"
+                android:layout_weight="0.03"
+                android:clickable="true"
+                android:onClick="paraOutro"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</RelativeLayout>
