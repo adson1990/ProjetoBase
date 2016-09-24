@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_editar_dados"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="projetobase.projeto.app.com.br.projetobase.EditarDados"
+    tools:showIn="@layout/activity_editar_dados">
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:orientation="vertical" android:background="@color/branco">
+
+        <ImageView
+            android:layout_width="446dp"
+            android:layout_height="659dp"
+            android:src="@drawable/logo_app"
+            android:layout_gravity="center" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="EDITE SEUS DADOS"
+                    android:textColor="@color/preto"
+                    android:textStyle="bold"/>
+
+                //editar nome
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nome:"
+                    android:textSize="20px"
+                    android:textStyle="bold"
+                    android:textColor="@color/preto"
+                    android:layout_marginTop="15px"
+                    android:layout_marginLeft="10px"/>
+                <EditText
+                    android:id="@+id/nome_cadastro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/cinzaEscuro"
+                    android:singleLine="true"
+                    android:inputType="text"
+                    android:layout_marginTop="10px" />
+
+                //editar senha
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Senha:"
+                    android:textSize="20px"
+                    android:textStyle="bold"
+                    android:textColor="@color/preto"
+                    android:layout_marginTop="15px"
+                    android:layout_marginLeft="10px"/>
+                <EditText
+                    android:id="@+id/senha_cadastro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/cinzaEscuro"
+                    android:singleLine="true"
+                    android:inputType="textPassword"
+                    android:maxLength="8"
+                    android:layout_marginTop="10px"/>
+
+                //confirmar senha
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Confirme a Senha:"
+                    android:textSize="20px"
+                    android:textStyle="bold"
+                    android:textColor="@color/preto"
+                    android:layout_marginTop="15px"
+                    android:layout_marginLeft="10px"/>
+                <EditText
+                    android:id="@+id/confirme_a_senha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/cinzaEscuro"
+                    android:singleLine="true"
+                    android:inputType="textPassword"
+                    android:maxLength="8"
+                    android:layout_marginTop="10px"/>
+
+                //atualiza número de celular
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Digite seu número:"
+                    android:textSize="20px"
+                    android:textStyle="bold"
+                    android:textColor="@color/preto"
+                    android:layout_marginTop="15px"
+                    android:layout_marginLeft="10px"/>
+                <EditText
+                    android:id="@+id/telefone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/cinzaEscuro"
+                    android:singleLine="true"
+                    android:layout_marginTop="10px"/>
+
+                //edita e-mail
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="E-mail:"
+                    android:textSize="20px"
+                    android:textStyle="bold"
+                    android:textColor="@color/preto"
+                    android:layout_marginTop="15px"
+                    android:layout_marginLeft="10px"/>
+                <EditText
+                    android:id="@+id/edita_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/cinzaEscuro"
+                    android:singleLine="true"
+                    android:inputType="text"
+                    android:layout_marginTop="10px"/>
+
+                //confirma e-mail editado
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Confirme seu e-mail:"
+                    android:textSize="20px"
+                    android:textStyle="bold"
+                    android:textColor="@color/preto"
+                    android:layout_marginTop="15px"
+                    android:layout_marginLeft="10px"/>
+                <EditText
+                    android:id="@+id/confirma_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/cinzaEscuro"
+                    android:singleLine="true"
+                    android:inputType="text"
+                    android:layout_marginTop="10px"/>
+
+                //edita carteira do plano de saúde
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Número da carteira:"
+                    android:textSize="20px"
+                    android:textStyle="bold"
+                    android:textColor="@color/preto"
+                    android:layout_marginTop="15px"
+                    android:layout_marginLeft="10px"/>
+                <EditText
+                    android:id="@+id/recebe_carteira"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/cinzaEscuro"
+                    android:singleLine="true"
+                    android:inputType="text"
+                    android:layout_marginTop="10px"/>
+
+                //edita o plano de saúde
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Digite seu plano"
+                    android:textSize="20px"
+                    android:textStyle="bold"
+                    android:textColor="@color/preto"
+                    android:layout_marginTop="15px"
+                    android:layout_marginLeft="10px"/>
+                <EditText
+                    android:id="@+id/recebe_plano"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/cinzaEscuro"
+                    android:singleLine="true"
+                    android:inputType="text"
+                    android:layout_marginTop="10px"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enviar"
+                    android:layout_marginTop="20px"
+                    android:onClick="atualizarDados"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/msg_edita"
+                    android:textStyle="bold"
+                    android:textColor="@color/preto"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:layout_marginTop="10px"/>
+
+                //botão de menu
+
+                <Button
+                    android:id="@+id/menuPopUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="30px"
+                    android:text="Menu"
+                    android:textColor="@color/preto"
+                    android:textStyle="bold"
+                    android:layout_gravity="left|bottom" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </FrameLayout>
+
+</RelativeLayout>

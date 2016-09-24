@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="projetobase.projeto.app.com.br.projetobase.Fragment"
+    tools:showIn="@layout/activity_fragment">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/layout_superior"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:background="@color/branco">
+
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alterar Texto"
+                android:id="@+id/botao1"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:tag="bt1"
+                android:onClick="clickBotao"/>
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sobre"
+                android:id="@+id/botao2"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="15dp"
+                android:tag="bt2"
+                android:onClick="clickBotao"/>
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status"
+                android:id="@+id/botao3"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="15dp"
+                android:tag="bt3"
+                android:onClick="clickBotao"/>
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AJUDA"
+                android:id="@+id/botao4"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="15dp"
+                android:tag="bt4"
+                android:onClick="clickBotao"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layout_inferior"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="9"
+            android:background="@color/azulGelo"
+            android:orientation="vertical">
+
+
+            //para se trabalhar diretamente com fragment no xml
+            <!--fragment
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:name="projeto.treino.app.com.br.projetofg.Fragment1"
+                android:id="@+id/fragment1" /-->
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

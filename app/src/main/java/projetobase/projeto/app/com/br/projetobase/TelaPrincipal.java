@@ -26,6 +26,8 @@ import java.util.Locale;
 /**
  * Created by Adson on 23/10/2015.
  * Tela principal do programa onde daqui partem todas as requisições
+ *
+ * @see Configuracao
  */
 
 public class TelaPrincipal extends AppCompatActivity {

@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_para_outro"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="projetobase.projeto.app.com.br.projetobase.ParaOutro"
+    tools:showIn="@layout/activity_para_outro">
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:orientation="vertical" android:background="@color/branco">
+
+        //leyout da página
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selecione um tipo"
+            android:textColor="@color/preto"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:textSize="40px"/>
+
+        //opções de tipo de acidente
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/RB_transito"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Trânsito"
+                android:textColor="@color/preto"
+                android:textStyle="bold"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:layout_marginTop="10px"
+                android:layout_marginLeft="260px"/>
+
+            <RadioButton
+                android:id="@+id/RB_aquatico"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aquático"
+                android:textColor="@color/preto"
+                android:textStyle="bold"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:layout_marginLeft="260px"/>
+
+            <RadioButton
+                android:id="@+id/RB_domestico"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Doméstico"
+                android:textColor="@color/preto"
+                android:textStyle="bold"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:layout_marginLeft="260px"/>
+
+            <RadioButton
+                android:id="@+id/RB_outros"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Outros"
+                android:textColor="@color/preto"
+                android:textStyle="bold"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:layout_marginLeft="260px"/>
+        </RadioGroup>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                //acidentes de trânsito
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Colisão"
+                        android:id="@+id/CB_colisao"
+                        android:textColor="@color/preto" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Atropelamento"
+                        android:textColor="@color/preto"
+                        android:id="@+id/CB_atropelamento" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Capotagem"
+                        android:textColor="@color/preto"
+                        android:id="@+id/CB_capotagem" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Queda de moto"
+                        android:textColor="@color/preto"
+                        android:id="@+id/CB_moto" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fogo em veículo"
+                        android:textColor="@color/preto"
+                        android:id="@+id/CB_fogo_veículo" />
+                </LinearLayout>
+
+                //acidentes domésticos
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Choque"
+                        android:textColor="@color/preto"
+                        android:id="@+id/CB_choque" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Agressão"
+                        android:id="@+id/CB_agressao"
+                        android:textColor="@color/preto" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mal súbito"
+                        android:textColor="@color/preto"
+                        android:id="@+id/CB_mal" />
+                </LinearLayout>
+
+                //aquaticos e outros
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Afogamento"
+                        android:textColor="@color/preto"
+                        android:id="@+id/CB_afogamento"
+                        android:layout_below="@+id/CB_choque"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Outros"
+                        android:textColor="@color/preto"
+                        android:id="@+id/CB_outros"
+                        android:layout_alignTop="@+id/CB_afogamento"
+                        android:layout_alignLeft="@+id/CB_mal"
+                        android:layout_alignStart="@+id/CB_mal" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Trabalho de parto"
+                        android:textColor="@color/preto"
+                        android:id="@+id/CB_parto" />
+                </LinearLayout>
+
+                //text view para acidentes de transito
+                <TextView
+                    android:id="@+id/paraTransito"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Para acidentes de transito:"
+                    android:textColor="@color/preto"
+                    android:textStyle="bold"/>
+
+                //envolvidos no acidente
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pedestre"
+                        android:textColor="@color/preto"
+                        android:id="@+id/CB_pedestre" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ciclista"
+                        android:textColor="@color/preto"
+                        android:id="@+id/CB_ciclista" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Motociclista"
+                        android:textColor="@color/preto"
+                        android:id="@+id/CB_motociclista" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Carro"
+                        android:textColor="@color/preto"
+                        android:id="@+id/CB_carro" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Onibus"
+                        android:textColor="@color/preto"
+                        android:id="@+id/CB_onibus" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Caminhão"
+                        android:textColor="@color/preto"
+                        android:id="@+id/CB_caminhao" />
+
+                </LinearLayout>
+
+                //quantidade de envolvidos
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Quantidade de envolvidos"
+                    android:textColor="@color/preto"
+                    android:textStyle="bold"
+                    android:layout_marginTop="50px"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1 pessoa"
+                        android:textColor="@color/preto"
+                        android:id="@+id/CB_pes1" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2 pessoas"
+                        android:textColor="@color/preto"
+                        android:id="@+id/CB_pes2" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3 ou mais"
+                        android:textColor="@color/preto"
+                        android:id="@+id/CB_pes3" />
+
+
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ENVIAR"
+                    android:onClick="gravar"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

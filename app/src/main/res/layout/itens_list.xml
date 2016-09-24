@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="@color/branco">
+
+    <ImageView
+        android:layout_width="446dp"
+        android:layout_height="659dp"
+        android:src="@drawable/logo_app"
+        android:layout_gravity="center" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/campoID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="@color/preto"
+            android:textStyle="bold"
+            android:text="ID"/>
+
+        <TextView
+            android:id="@+id/campoChamado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/preto"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Chamado"/>
+
+        <TextView
+            android:id="@+id/campoData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/preto"
+            android:text="Data"/>
+
+    </LinearLayout>
+</FrameLayout>

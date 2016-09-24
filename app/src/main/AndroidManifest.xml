@@ -52,6 +52,109 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="projetobase.projeto.app.com.br.projetobase.LoginActivity" />
         </activity>
+        <activity
+            android:name=".Perfil"
+            android:label="@string/title_activity_perfil"
+            android:parentActivityName=".TelaPrincipal"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="projetobase.projeto.app.com.br.projetobase.TelaPrincipal" />
+        </activity>
+        <activity
+            android:name=".ExibirPerfil"
+            android:label="@string/title_activity_exibir_perfil"
+            android:parentActivityName=".Perfil"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="projetobase.projeto.app.com.br.projetobase.Perfil" />
+        </activity>
+        <activity
+            android:name=".Ajuda"
+            android:label="@string/title_activity_ajuda"
+            android:parentActivityName=".TelaPrincipal"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="projetobase.projeto.app.com.br.projetobase.TelaPrincipal" />
+        </activity>
+        <activity
+            android:name=".Configuracao"
+            android:label="@string/title_activity_configuracao"
+            android:parentActivityName=".TelaPrincipal"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="projetobase.projeto.app.com.br.projetobase.TelaPrincipal" />
+        </activity>
+        <activity
+            android:name=".EditarDados"
+            android:label="@string/title_activity_editar_dados"
+            android:parentActivityName=".Configuracao"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="projetobase.projeto.app.com.br.projetobase.Configuracao" />
+        </activity>
+        <activity
+            android:name=".Sobre"
+            android:label="@string/title_activity_sobre"
+            android:parentActivityName=".Configuracao"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="projetobase.projeto.app.com.br.projetobase.Configuracao" />
+        </activity>
+        <activity
+            android:name=".ParaVoce"
+            android:label="@string/title_activity_para_voce"
+            android:parentActivityName=".TelaPrincipal"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="projetobase.projeto.app.com.br.projetobase.TelaPrincipal" />
+        </activity>
+        <activity
+            android:name=".ParaOutro"
+            android:label="@string/title_activity_para_outro"
+            android:parentActivityName=".TelaPrincipal"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="projetobase.projeto.app.com.br.projetobase.TelaPrincipal" />
+        </activity>
+        <activity
+            android:name=".ConsultarChamado"
+            android:label="@string/title_activity_consultar_chamado"
+            android:parentActivityName=".TelaPrincipal"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="projetobase.projeto.app.com.br.projetobase.TelaPrincipal" />
+        </activity>
+        <activity
+            android:name=".ListarChamados"
+            android:label="@string/title_activity_listar_chamados"
+            android:parentActivityName=".ConsultarChamado"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="projetobase.projeto.app.com.br.projetobase.ConsultarChamado" />
+        </activity>
+        <activity
+            android:name=".Fragment"
+            android:label="@string/title_activity_fragment"
+            android:parentActivityName=".TelaPrincipal"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="projetobase.projeto.app.com.br.projetobase.TelaPrincipal" />
+        </activity>
+        <activity
+            android:name=".Status"
+            android:label="@string/title_activity_status"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

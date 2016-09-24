@@ -71,4 +71,15 @@
     <string name="title_activity_tela_principal">TelaPrincipal</string>
     <string name="title_activity_cadastro_usuario">CadastroUsuario</string>
     <string name="title_activity_esquecer_senha">EsquecerSenha</string>
+    <string name="title_activity_perfil">Perfil</string>
+    <string name="title_activity_ajuda">Ajuda</string>
+    <string name="title_activity_configuracao">Configuracao</string>
+    <string name="title_activity_editar_dados">EditarDados</string>
+    <string name="title_activity_sobre">Sobre</string>
+    <string name="title_activity_para_voce">ParaVoce</string>
+    <string name="title_activity_para_outro">ParaOutro</string>
+    <string name="title_activity_consultar_chamado">ConsultarChamado</string>
+    <string name="title_activity_listar_chamados">ListarChamados</string>
+    <string name="title_activity_fragment">Fragment</string>
+    <string name="title_activity_status">Status</string>
 </resources>
