@@ -20,10 +20,8 @@ import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.AsyncTask;
-import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v7.app.AlertDialog;
-import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -38,6 +36,10 @@ import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.Calendar;
+import java.util.Date;
+
+import Recursos.PerfilUsuario;
 
 /**
  * Created by Adson on 19/05/2016.
@@ -53,6 +55,9 @@ public class Perfil extends AppCompatActivity
 
     private EditText edtUrl;
     private Button selecionarNome;
+    private Button btCaptura;
+    private Button resetarDados;
+    private Button exibirPerfil;
     private TextView nomePerfil;
     private EditText recebeNomePerfil;
     private SeekBar seekBarBLUE;
@@ -65,8 +70,10 @@ public class Perfil extends AppCompatActivity
 
     static final int REQUEST_IMAGE_OPEN = 1;
 
-    SQLiteDatabase banco = null;
-    Cursor cursor = null;
+    private SQLiteDatabase banco = null;
+    private Cursor cursor = null;
+
+    private PerfilUsuario info;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,6 +92,8 @@ public class Perfil extends AppCompatActivity
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        info = new PerfilUsuario();
+
         edtUrl = (EditText)findViewById(R.id.editText1);
         // Obtendo a ultima URL digitada
         SharedPreferences preferencias = getSharedPreferences(
@@ -95,6 +104,13 @@ public class Perfil extends AppCompatActivity
         nomePerfil = (TextView) findViewById(R.id.nomePerfil);
         recebeNomePerfil = (EditText) findViewById(R.id.recebeNomePerfil);
         selecionarNome = (Button) findViewById(R.id.selecionarNome);
+        selecionarNome.setOnClickListener(this);
+        btCaptura = (Button) findViewById(R.id.btCaptura);
+        btCaptura.setOnClickListener(this);
+        resetarDados = (Button) findViewById(R.id.resetarDados);
+        resetarDados.setOnClickListener(this);
+        exibirPerfil = (Button) findViewById(R.id.exibirPerfil);
+        exibirPerfil.setOnClickListener(this);
         seekBarRED = (SeekBar) findViewById(R.id.seekBar_C);
         seekBarGREEN = (SeekBar) findViewById(R.id.seekBar_B);
         seekBarBLUE = (SeekBar) findViewById(R.id.seekBar_A);
@@ -172,29 +188,6 @@ public class Perfil extends AppCompatActivity
             if (cursor != null && !cursor.isClosed()) {
                 cursor.close();
             }
-        }
-    }
-
-    public void resetarDados(View view){
-        usuario.setImageDrawable(getDrawable(R.drawable.usuario));
-        nomePerfil.setText("");
-        nomePerfil.setTextColor(Color.BLACK);
-        seekBarBLUE.setProgress(130);
-        seekBarGREEN.setProgress(130);
-        seekBarRED.setProgress(130);
-        azul.setChecked(false);
-        verde.setChecked(false);
-        vermelho.setChecked(false);
-
-        try {
-            String delSql = "DELETE FROM perfil";
-            SQLiteStatement sqLiteStatement = banco.compileStatement(delSql);
-            sqLiteStatement.execute();
-
-            Toast toast = Toast.makeText(this, "Dados apagados com sucesso!", Toast.LENGTH_LONG);
-            toast.show();
-        }catch (Exception e){
-            e.printStackTrace();
         }
     }
 
@@ -312,21 +305,7 @@ public class Perfil extends AppCompatActivity
 
     //método para o usuário escolher de onde capturar a imagem interna no celular, este que e chamado
     public void dialogoDecisao(View view){
-        android.app.AlertDialog dialog = new android.app.AlertDialog.Builder(this)
-                .setTitle("De onde deseja Capturar Imagem?").create();
-        dialog.setButton("Câmera", new DialogInterface.OnClickListener() {//método obsoleto
-            public void onClick(DialogInterface dialog, int which) {
-                capturarImagemCamera();
-            }
-        });
-        dialog.setButton2("Galeria", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                capturarImagemGaleria();
-            }
-        });
-        dialog.show();
-
-        /*existe tb a opção de setar um botão nulo com o comando:
+          /*existe tb a opção de setar um botão nulo com o comando:
             dialog.setNeutralButton("ok", null);*/
 
         /*AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -403,7 +382,98 @@ public class Perfil extends AppCompatActivity
 
     @Override
     public void onClick(View v) {
-        nomePerfil.setText(recebeNomePerfil.getText().toString());
+        switch(v.getId()) {
+            case R.id.selecionarNome:
+            nomePerfil.setText(recebeNomePerfil.getText().toString());
+                break;
+
+            case R.id.btCaptura:
+                android.app.AlertDialog dialog = new android.app.AlertDialog.Builder(this)
+                        .setTitle("De onde deseja Capturar Imagem?").create();
+                dialog.setButton("Câmera", new DialogInterface.OnClickListener() {//método obsoleto
+                    public void onClick(DialogInterface dialog, int which) {
+                        capturarImagemCamera();
+                    }
+                });
+                dialog.setButton2("Galeria", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        capturarImagemGaleria();
+                    }
+                });
+                dialog.show();
+                break;
+
+            case R.id.resetarDados:
+                usuario.setImageDrawable(getDrawable(R.drawable.usuario));
+                nomePerfil.setText("");
+                nomePerfil.setTextColor(Color.BLACK);
+                seekBarBLUE.setProgress(130);
+                seekBarGREEN.setProgress(130);
+                seekBarRED.setProgress(130);
+                azul.setChecked(false);
+                verde.setChecked(false);
+                vermelho.setChecked(false);
+
+            try {
+                String delSql = "DELETE FROM perfil";
+                SQLiteStatement sqLiteStatement = banco.compileStatement(delSql);
+                sqLiteStatement.execute();
+
+                Toast toast = Toast.makeText(this, "Dados apagados com sucesso!", Toast.LENGTH_LONG);
+                toast.show();
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+            break;
+
+            case R.id.exibirPerfil:
+                String sql       =   "select * from perfil";
+                cursor           =   banco.rawQuery(sql, null);
+
+                Date dataAtual = new Date();//retorna a data atual
+                int diaAtual = dataAtual.getDate();
+                int mesAtual = dataAtual.getMonth();
+                int anoAtual = dataAtual.getYear();
+
+                //obtendo data de nascimento do banco
+                String data = cursor.getString(cursor.getColumnIndex("data"));
+                int diaNascimento = Integer.parseInt(data.substring(0,2));
+                int mesNascimento = Integer.parseInt(data.substring(3,5));
+                int anoNascimento = Integer.parseInt(data.substring(6,data.length()));
+
+                //setando a data de nascimento num tipo calendar
+                Calendar calendario = Calendar.getInstance();
+                calendario.set(Calendar.YEAR, anoNascimento);
+                calendario.set(Calendar.MONTH, mesNascimento);
+                calendario.set(Calendar.DAY_OF_MONTH, diaNascimento);
+
+                //descobrindo idade
+                int idade = anoAtual - anoNascimento;
+                if(mesAtual < mesNascimento){
+                    idade--;
+                }else if(mesAtual >= mesNascimento && diaNascimento > diaAtual){
+                    idade--;
+                }
+
+                //passando parâmetros via Intent
+                Intent it = new Intent(this, ExibirPerfil.class);
+                it.putExtra("nome", nomePerfil.getText().toString());
+                it.putExtra("idade", idade);
+
+                /**
+                 * passando informações através de objeto, com a classe PerfilUsuario implementando Parcelable
+                 *
+                 * @see PerfilUsuario
+                 */
+                info = new PerfilUsuario(cursor.getString(cursor.getColumnIndex("nome")),
+                        cursor.getString(cursor.getColumnIndex("nome_login")),
+                        cursor.getString(cursor.getColumnIndex("mail")),
+                        cursor.getInt(cursor.getColumnIndex("telefone")));
+                it.putExtra("perfilUser", info);
+
+                startActivity(it);
+                break;
+        }
     }
 
     @Override
@@ -457,14 +527,6 @@ public class Perfil extends AppCompatActivity
         } else if (!vermelho.isChecked()) {
             seekBarRED.setEnabled(false);
         }
-    }
-
-
-    public void exibirPerfil(View v){
-        Intent it = new Intent(this, ExibirPerfil.class);
-        it.putExtra("nome", nomePerfil.getText().toString());
-        it.putExtra("idade", 25);
-        startActivity(it);
     }
 
     public void alert(Activity context,String msg) {

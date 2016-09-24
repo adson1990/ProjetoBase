@@ -9,12 +9,10 @@ import android.view.View;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Configuration;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.SubMenu;
-import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
@@ -133,40 +131,40 @@ public class TelaPrincipal extends AppCompatActivity {
                 break;
             case EDITAR_DADOS:
                 onPause();
-               // startActivity(new Intent(this, EditarDadosActivity.class));
+                startActivity(new Intent(this, EditarDados.class));
                 break;
             case CHAMADOS:
                 consultaChamados();
                 break;
             case EXTRAS:
                 onPause();
-               // startActivity(new Intent(this, FragmentActivity.class));
+                startActivity(new Intent(this, Fragment.class));
                 break;
         }
         return super.onOptionsItemSelected(menu);
     }
 
     public void paraVoce(View view){
-      //  startActivity(new Intent(this, ParaVoceActivity.class));
+        startActivity(new Intent(this, ParaVoce.class));
     }
 
     public void paraOutro(View view){
-       // startActivity(new Intent(this, ParaOutroActivity.class));
+        startActivity(new Intent(this, ParaOutro.class));
     }
 
     public void telaEditar(View view){
         onPause();
-       // startActivity(new Intent(this, PerfilActivity.class));
+        startActivity(new Intent(this, Perfil.class));
     }
 
     public void configuracao(){
         onPause();
-        //startActivity(new Intent(this, ConfiguracoesActivity.class));
+        startActivity(new Intent(this, Configuracao.class));
     }
 
     public void consultaChamados(){
         onPause();
-        //startActivity(new Intent(this, ConsultarChamadosActivity.class));
+        startActivity(new Intent(this, ConsultarChamado.class));
     }
 
     //métodos que controlam a vida de uma activity

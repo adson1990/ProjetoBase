@@ -17,14 +17,8 @@ import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.DatePicker;
-import android.widget.EditText;
-import android.widget.RadioButton;
-import android.widget.Spinner;
 import android.database.sqlite.SQLiteDatabase;
 import android.widget.Toast;
 
@@ -55,8 +49,6 @@ public class CadastroUsuario extends AppCompatActivity {
     private String sexo;
     ValidaCPF vCPF = new ValidaCPF();
     ValidarNumero vNumero= new ValidarNumero();
-
-    Runtime rt = Runtime.getRuntime();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -263,8 +255,8 @@ public class CadastroUsuario extends AppCompatActivity {
                 toast.show();
 
                 fecharBanco();
-                rt.runFinalization();
-                finish();
+                onPause();
+                onStop();
                 onDestroy();
                 startActivity(new Intent(this, TelaPrincipal.class));
             } catch (Exception erro) {

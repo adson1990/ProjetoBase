@@ -34,6 +34,9 @@
     <string name="cadastrar">Cadastrar</string>
     <string name="tipo">Tipo</string>
     <string name="rh">RH</string>
+    <string name="resetarDados">Resetar Perfil</string>
+    <string name="selecionarNome">Selecionar Nome</string>
+    <string name="salvar">Salvar</string>
     <string name="msgCadastroComplementar">
         O cadastro comlementar não é obrigatório, entretanto, agiliza o atendimento
         caso o chamado/ocorrência seja para o próprio usuário que pede. Assim o SAMU

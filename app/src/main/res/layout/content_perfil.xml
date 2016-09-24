@@ -65,7 +65,7 @@
                     android:textStyle="bold"
                     android:layout_marginLeft="20px"
                     android:layout_marginTop="30px"
-                    android:onClick="dialogoDecisao"/>
+                    android:id="@+id/btCaptura"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -92,12 +92,11 @@
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Selecionar Nome"
+                    android:text="@string/selecionarNome"
                     android:id="@+id/selecionarNome"
                     android:textStyle="bold"
                     android:layout_marginLeft="15px"
-                    android:layout_marginTop="15px"
-                    android:onClick="nomeDePerfil"/>
+                    android:layout_marginTop="15px" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -179,15 +178,15 @@
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Resetar Perfil"
+                    android:text="@string/resetarDados"
                     android:layout_marginTop="25px"
                     android:layout_marginLeft="270px"
-                    android:onClick="resetarDados"/>
+                    android:id="@+id/resetarDados"/>
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="SALVAR"
+                    android:text="@string/salvar"
                     android:layout_marginTop="20px"
                     android:layout_marginLeft="15px"
                     android:onClick="salvar"/>
@@ -195,9 +194,10 @@
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/btnExibirPerfil"
+                    android:id="@+id/exibirPerfil"
                     android:text="Exibir Perfil"
-                    android:onClick="exibirPerfil"/>
+                    android:layout_marginTop="20px"
+                    android:layout_marginLeft="15px"/>
 
             </LinearLayout>
         </ScrollView>

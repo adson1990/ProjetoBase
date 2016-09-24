@@ -13,4 +13,52 @@
     tools:context="projetobase.projeto.app.com.br.projetobase.ExibirPerfil"
     tools:showIn="@layout/activity_exibir_perfil">
 
+    <!--nome do perfil-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtTexto"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_marginLeft="@dimen/activity_vertical_26dp"/>
+
+    <!--nome completo do usuario-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nomeUser"
+        android:text="@string/nome"
+        android:layout_marginTop="@dimen/activity_horizontal_26dp"
+        android:layout_below="@+id/txtTexto"
+        android:layout_alignStart="@+id/txtTexto" />
+
+    <!--nome de login-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nomePerfilUser"
+        android:text="@string/usuario"
+        android:layout_marginTop="@dimen/activity_horizontal_26dp"
+        android:layout_below="@+id/nomeUser"
+        android:layout_alignStart="@+id/nomeUser" />
+
+    <!--e-mail-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/emailUser"
+        android:text="@string/mail"
+        android:layout_marginTop="@dimen/activity_horizontal_26dp"
+        android:layout_below="@+id/nomePerfilUser"
+        android:layout_alignStart="@+id/nomePerfilUser"/>
+
+    <!--telefone-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/telefoneUser"
+        android:text="@string/telefone"
+        android:layout_marginTop="@dimen/activity_horizontal_26dp"
+        android:layout_below="@+id/emailUser"
+        android:layout_alignStart="@+id/emailUser"/>
+
 </RelativeLayout>
