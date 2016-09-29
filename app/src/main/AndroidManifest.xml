@@ -16,7 +16,8 @@
         //1-activity de login
         <activity
             android:name=".LoginActivity"
-            android:label="@string/title_activity_login">
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait"> <!--tela fica fixa na vertical-->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,6 +30,8 @@
             android:label="@string/title_activity_tela_principal"
             android:parentActivityName=".LoginActivity"
             android:theme="@style/AppTheme.NoActionBar">
+            <!--android:configChanges="orientation|keyboardHidden" ao mudar a orientação não recria a activity-->
+            <!--este método necessita implementar o método onConfigurationChange(Configuration)-->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="projetobase.projeto.app.com.br.projetobase.LoginActivity" />

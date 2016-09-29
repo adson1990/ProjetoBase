@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_perfil"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="projetobase.projeto.app.com.br.projetobase.Perfil"
+    tools:showIn="@layout/activity_perfil">
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:layout_width="453dp"
+            android:layout_height="670dp"
+            android:src="@drawable/logo_app"
+            android:layout_gravity="center" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                android:orientation="vertical" android:weightSum="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView1"
+                    android:text="Digite a URL da imagem."
+                    android:textAppearance="?android:attr/textAppearanceLarge"/>
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editText1"
+                    android:ems="10">
+                    <requestFocus/>
+                </EditText>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button1"
+                    android:text="Baixar Imagem"
+                    android:onClick="baixarImagemClick"/>
+                <ImageView
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:id="@+id/imageViewUsuario"
+                    android:src="@drawable/usuario"
+                    android:layout_marginTop="30px"
+                    android:layout_marginLeft="20px"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Captura Interna"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginTop="30px"
+                    android:id="@+id/btCaptura"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nome de Perfil"
+                    android:textColor="@color/preto"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15px"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:singleLine="true"
+                    android:layout_marginLeft="15px"
+                    android:textSize="20dp"
+                    android:textColor="@color/preto"
+                    android:maxLength="10"
+                    android:background="@color/cinza"
+                    android:layout_marginTop="25px"
+                    android:tag="Nome de usuário."
+                    android:hint="Digite aqui um nome para usuário."
+                    android:id="@+id/recebeNomePerfil"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/selecionarNome"
+                    android:id="@+id/selecionarNome"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="15px"
+                    android:layout_marginTop="15px" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/preto"
+                    android:textStyle="bold"
+                    android:textSize="30dp"
+                    android:hint="nome de usuario"
+                    android:layout_marginTop="15px"
+                    android:layout_marginLeft="50px"
+                    android:id="@+id/nomePerfil"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Escolha uma cor"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20px"
+                    android:textColor="@color/preto"
+                    android:textStyle="italic"
+                    android:textSize="15dp"/>
+
+                //check Box que irão acionar o seek bar para as cores do nome de perfil.
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Azul"
+                        android:id="@+id/corAzul"
+                        android:textColor="@color/preto"
+                        android:layout_marginLeft="25px"/>
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Verde"
+                        android:id="@+id/corVerde"
+                        android:textColor="@color/preto"
+                        android:layout_marginLeft="80px"/>
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Vermelho"
+                        android:id="@+id/corVermelho"
+                        android:textColor="@color/preto"
+                        android:layout_marginLeft="80px"/>
+
+                </LinearLayout>
+
+                //cor Azul
+                <SeekBar
+                    android:id="@+id/seekBar_A"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="260"
+                    android:progress="130" />
+
+                //cor Verde
+                <SeekBar
+                    android:id="@+id/seekBar_B"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="260"
+                    android:progress="130" />
+
+                //cor Vermelho
+                <SeekBar
+                    android:id="@+id/seekBar_C"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="260"
+                    android:progress="130" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/resetarDados"
+                    android:layout_marginTop="25px"
+                    android:layout_marginLeft="270px"
+                    android:id="@+id/resetarDados"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/salvar"
+                    android:layout_marginTop="20px"
+                    android:layout_marginLeft="15px"
+                    android:onClick="salvar"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/exibirPerfil"
+                    android:text="Exibir Perfil"
+                    android:layout_marginTop="20px"
+                    android:layout_marginLeft="15px"/>
+
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+
+</RelativeLayout>

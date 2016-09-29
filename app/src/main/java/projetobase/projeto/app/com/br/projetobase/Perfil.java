@@ -92,47 +92,70 @@ public class Perfil extends AppCompatActivity
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        info = new PerfilUsuario();
+        if(savedInstanceState != null){
+           nomePerfil.setText(savedInstanceState.getString("nome"));
+            seekBarBLUE.setProgress(savedInstanceState.getInt("seekBlue"));
+            seekBarGREEN.setProgress(savedInstanceState.getInt("seekGreen"));
+            seekBarRED.setProgress(savedInstanceState.getInt("seekRed"));
+            azul.setChecked(savedInstanceState.getBoolean("checkAzul"));
+            verde.setChecked(savedInstanceState.getBoolean("checkVerde"));
+            vermelho.setChecked(savedInstanceState.getBoolean("checkVermelho"));
+        } else {
 
-        edtUrl = (EditText)findViewById(R.id.editText1);
-        // Obtendo a ultima URL digitada
-        SharedPreferences preferencias = getSharedPreferences(
-                "configuracao", MODE_PRIVATE);
-        String url = preferencias.getString("url_imagem", "http://");
-        edtUrl.setText(url);
+            info = new PerfilUsuario();
 
-        nomePerfil = (TextView) findViewById(R.id.nomePerfil);
-        recebeNomePerfil = (EditText) findViewById(R.id.recebeNomePerfil);
-        selecionarNome = (Button) findViewById(R.id.selecionarNome);
-        selecionarNome.setOnClickListener(this);
-        btCaptura = (Button) findViewById(R.id.btCaptura);
-        btCaptura.setOnClickListener(this);
-        resetarDados = (Button) findViewById(R.id.resetarDados);
-        resetarDados.setOnClickListener(this);
-        exibirPerfil = (Button) findViewById(R.id.exibirPerfil);
-        exibirPerfil.setOnClickListener(this);
-        seekBarRED = (SeekBar) findViewById(R.id.seekBar_C);
-        seekBarGREEN = (SeekBar) findViewById(R.id.seekBar_B);
-        seekBarBLUE = (SeekBar) findViewById(R.id.seekBar_A);
-        azul = (CheckBox) findViewById(R.id.corAzul);
-        verde = (CheckBox) findViewById(R.id.corVerde);
-        vermelho = (CheckBox) findViewById(R.id.corVermelho);
-        usuario = (ImageView) findViewById(R.id.imageViewUsuario);
+            edtUrl = (EditText) findViewById(R.id.editText1);
+            // Obtendo a ultima URL digitada
+            SharedPreferences preferencias = getSharedPreferences(
+                    "configuracao", MODE_PRIVATE);
+            String url = preferencias.getString("url_imagem", "http://");
+            edtUrl.setText(url);
 
-        selecionarNome.setOnClickListener(this);
-        seekBarRED.setOnSeekBarChangeListener(this);
-        seekBarGREEN.setOnSeekBarChangeListener(this);
-        seekBarBLUE.setOnSeekBarChangeListener(this);
-        azul.setOnCheckedChangeListener(this);
-        verde.setOnCheckedChangeListener(this);
-        vermelho.setOnCheckedChangeListener(this);
+            nomePerfil = (TextView) findViewById(R.id.nomePerfil);
+            recebeNomePerfil = (EditText) findViewById(R.id.recebeNomePerfil);
+            selecionarNome = (Button) findViewById(R.id.selecionarNome);
+            selecionarNome.setOnClickListener(this);
+            btCaptura = (Button) findViewById(R.id.btCaptura);
+            btCaptura.setOnClickListener(this);
+            resetarDados = (Button) findViewById(R.id.resetarDados);
+            resetarDados.setOnClickListener(this);
+            exibirPerfil = (Button) findViewById(R.id.exibirPerfil);
+            exibirPerfil.setOnClickListener(this);
+            seekBarRED = (SeekBar) findViewById(R.id.seekBar_C);
+            seekBarGREEN = (SeekBar) findViewById(R.id.seekBar_B);
+            seekBarBLUE = (SeekBar) findViewById(R.id.seekBar_A);
+            azul = (CheckBox) findViewById(R.id.corAzul);
+            verde = (CheckBox) findViewById(R.id.corVerde);
+            vermelho = (CheckBox) findViewById(R.id.corVermelho);
+            usuario = (ImageView) findViewById(R.id.imageViewUsuario);
 
-        seekBarBLUE.setEnabled(false);
-        seekBarGREEN.setEnabled(false);
-        seekBarRED.setEnabled(false);
+            selecionarNome.setOnClickListener(this);
+            seekBarRED.setOnSeekBarChangeListener(this);
+            seekBarGREEN.setOnSeekBarChangeListener(this);
+            seekBarBLUE.setOnSeekBarChangeListener(this);
+            azul.setOnCheckedChangeListener(this);
+            verde.setOnCheckedChangeListener(this);
+            vermelho.setOnCheckedChangeListener(this);
 
+            seekBarBLUE.setEnabled(false);
+            seekBarGREEN.setEnabled(false);
+            seekBarRED.setEnabled(false);
+
+        }
         abrirBancoPerfil();
         //deletarBanco();
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState){
+        super.onSaveInstanceState(outState);
+        outState.putString("nome", nomePerfil.getText().toString());
+        outState.putInt("seekBlue", seekBarBLUE.getProgress());
+        outState.putInt("seekGreen", seekBarGREEN.getProgress());
+        outState.putInt("seekRed", seekBarRED.getProgress());
+        outState.putBoolean("checkAzul", azul.isChecked());
+        outState.putBoolean("checkVerde", verde.isChecked());
+        outState.putBoolean("checkVermelho", vermelho.isChecked());
     }
 
     public void abrirBancoPerfil(){

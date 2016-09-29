@@ -14,6 +14,12 @@ import Recursos.PerfilUsuario;
 
 public class ExibirPerfil extends AppCompatActivity {
 
+    /**
+     * Caso a classe do objeto 'PerfilUsuario' extendesse Serializable
+     * na recuperação do objeto seria feito o comando getSerializableExtra('usu');
+     * lembrando que esse método consome mais processamento.
+     * */
+
     private TextView nomeUser;
     private TextView nomePerfilUser;
     private TextView emailUser;

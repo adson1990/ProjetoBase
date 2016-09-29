@@ -15,6 +15,12 @@ import android.os.Parcelable;
 
 public class PerfilUsuario implements Parcelable {
 
+    /**
+     * uma outra maneira mais rápida porém consome mais processamento
+     * seria implementar Serializable, assim poderia ser passado um
+     * objeto do tipo PerfilUsuario diretamente na it.putextra("usu", new PerfilUsuario("adson", 25));
+     * */
+
     private String nome;
     private int idade;
     private String usuario;
